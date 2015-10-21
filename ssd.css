@@ -1,0 +1,23 @@
+body {
+    margin: 2em;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: navy;
+    font-family: serif;
+}
+
+a:link {
+    color: cadetblue;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: darkcyan;
+    text-decoration: underline;
+}
+a:visited {
+    color: lightsteelblue;
+    text-decoration: none;
+}
+

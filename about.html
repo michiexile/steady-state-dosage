@@ -1,0 +1,56 @@
+<title>Steady state excited exponential decay</title>
+<meta charset='utf-8'/>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-24407867-3', 'johanssons.org');
+    ga('send', 'pageview');
+
+</script>
+<link rel="stylesheet" href="ssd.css"/>
+</head>
+
+<body>
+
+<h1>Calculate a steady state for a dosage regime</h1>
+
+<p>
+    <a href="index.html">This page is a tool</a> to get
+    a sense of what happens when you take regular doses of a
+    medication. The basic idea is that the body metabolizes your
+    medication at a steady rate, characterized by the halftime.
+    You can usually find this rate on e.g. the Wikipedia page
+    for your medicine. You enter your dosage, how often you take it
+    (in terms of the delay between dosage, common values are every
+    24h, every 12h or every 8h), and the amount of time you want to
+    see graphed.
+</p>
+<p>
+    Once you have the graph, you can hover over it with the mouse to get
+    values at different times, and you can read off some descriptive statistics
+    at the bottom: the average amount over a few days at the end, the standard
+    deviation and the range of these amounts.
+</p>
+<p>
+    While a mathematician I am <b>NOT</b> a trained medical professional.
+    This page and this tool should <b>NOT</b> be taken as authorative,
+    or as any sort of advice for your own medication. Always consult
+    with your doctor before any changes to your medication routines.
+</p>
+
+<div id="footer">
+    <span id="author">Mikael Vejdemo-Johansson</span>
+    <span id="email"><a href="mailto:mikael@johanssons.org">mikael@johanssons.org</a></span>
+</div>
+</body>
+</html>
