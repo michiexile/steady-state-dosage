@@ -44,9 +44,14 @@
             <input id="halftime" type="number" value="24" onchange="change_data()"/>
         </td></tr>
         <tr><td>
-            <label for="delay">Dosage every (hours):</label>
+            <label for="delay">Dosage time(s) [separate with commas]:</label>
         </td><td>
-            <input id="delay" type="number" value="24" onchange="change_data()"/>
+            <input id="delay" type="number" value="8" onchange="change_data()"/>
+        </td></tr>
+        <tr><td>
+            <label for="missed">Missed dose(s) [separate with commas]:</label>
+        </td><td>
+            <input id="missed" type="number" value="" onchange="change_data()"/>
         </td></tr>
         <tr><td>
             <label for="chartwidth">Display chart for (days):</label> <br />

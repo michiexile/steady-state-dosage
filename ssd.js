@@ -8,21 +8,25 @@
 var halftime=24,
     totaltime=24*30,
     dosage=20,
-    dosage_delay=24;
+    dosage_delay=[8],
+    missed=[];
 var data;
 var chart;
 
 function update_data() {
     dosage = parseFloat(document.getElementById('dosage').value);
     halftime = parseFloat(document.getElementById('halftime').value);
-    dosage_delay = parseFloat(document.getElementById('delay').value);
     totaltime = parseFloat(document.getElementById('chartwidth').value)*24;
+    dosage_delay = document.getElementById('delay').split(',').map(parseFloat);
+    missed = document.getElementById('missed').split(',').map(parseInt);
 
     data = [dosage];
+    var taken = 0;
     for(i=1; i<totaltime; i++) {
         data.push(data[data.length-1]*Math.pow(2,-1/halftime))
-        if(i%dosage_delay == 0) {
-            data[data.length-1] += dosage;
+        taken++;
+        if((i%24 in dosage_delay) && !(taken in missed)) {
+            data[data.length - 1] += dosage;
         }
     }
 
