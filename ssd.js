@@ -17,7 +17,12 @@ function update_data() {
     dosage = parseFloat(document.getElementById('dosage').value);
     halftime = parseFloat(document.getElementById('halftime').value);
     totaltime = parseFloat(document.getElementById('chartwidth').value)*24;
-    dosage_delay = document.getElementById('delay').value.split(',').map(parseFloat);
+
+    dosage_delay = document.getElementById('delay').value.split(',');
+    for(i=0; i<dosage_delay.length; i++) {
+        dosage_delay[i] = parseInt(dosage_delay[i]);
+    }
+
     missed = document.getElementById('missed').value.split(',');
     for(i=0; i<missed.length; i++) {
         missed[i] = parseInt(missed[i]);
